@@ -6,17 +6,17 @@ const ProjectShowcase = () => {
     {
       title: "E-Learning Management System",
       iconColor: "text-blue-800",
-      link: "https://github.com/your-repo-1"
+      link: "https://github.com/Arsathkhan12/E-Learning-management-System"
     },
     {
       title: "City Taxi: A Web Based system for Taxi Service",
       iconColor: "text-blue-800",
-      link: "https://github.com/your-repo-2"
+      link: "https://github.com/Arsathkhan12/CarTaxiProject"
     },
     {
       title: "Portfolio Website",
       iconColor: "text-blue-800",
-      link: "https://github.com/your-repo-4"
+      link: "https://github.com/Arsathkhan12/React-my-Portfolio"
     },
   ];
 
