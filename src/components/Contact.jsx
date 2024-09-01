@@ -28,7 +28,7 @@ const Contact = () => {
             >
               Let's Talk
             </motion.h3>
-            <p>Do you have a project in your mind, contact me here...</p>
+            <p>Do you have a project in your mind? Contact me here...</p>
             <motion.div 
               className="mb-4 mt-8"
               whileHover={{ x: 10 }}
@@ -62,7 +62,11 @@ const Contact = () => {
             animate={{ opacity: 1, rotateY: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <form className="space-y-4">
+            <form 
+              className="space-y-4" 
+              action="https://formspree.io/f/mldrvrwl" 
+              method="POST"
+            >
               <motion.div 
                 whileFocus={{ boxShadow: "0px 0px 8px rgba(0, 255, 255, 0.8)", scale: 1.05 }}
                 transition={{ duration: 0.3 }}
@@ -72,6 +76,8 @@ const Contact = () => {
                   type="text" 
                   className="w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-purple-400"
                   placeholder="Enter Your Name" 
+                  name="name"
+                  required 
                 />
               </motion.div>
               <motion.div 
@@ -80,9 +86,11 @@ const Contact = () => {
               >
                 <label htmlFor="email" className="block mb-2">Email</label>
                 <input 
-                  type="text" 
+                  type="email" 
                   className="w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-purple-400"
                   placeholder="Enter Your Email" 
+                  name="email"
+                  required 
                 />
               </motion.div>
               <motion.div 
@@ -95,6 +103,8 @@ const Contact = () => {
                   className="w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-purple-400"
                   rows="5"
                   placeholder="Enter Your Message" 
+                  name="message"
+                  required 
                 />
               </motion.div>
               <motion.button 
@@ -102,6 +112,7 @@ const Contact = () => {
                 whileTap={{ scale: 0.9 }}
                 transition={{ duration: 0.3 }}
                 className="bg-gradient-to-r from-red-800 to-blue-700 text-white transform transition-transform duration-300 hover:scale-105 px-8 py-2 rounded-full"
+                type="submit"
               >
                 Send
               </motion.button>
