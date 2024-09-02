@@ -56,6 +56,17 @@ const Education = () => {
                     <p className="text-white-200">E-Plus Exams</p>
                     <p className="text-gray-400">2018</p>
                 </motion.div>
+
+                <motion.div 
+                    whileInView={{ y: 0, opacity: 1 }}
+                    initial={{ y: 100, opacity: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="text-center"
+                >
+                    <h3 className="text-xl font-semibold">Mobile Phone Repairing Technician</h3>
+                    <p className="text-white-200">Sri Lanka Youth Center Sainthamaruthu</p>
+                    <p className="text-gray-400">2021 (6-Months)</p>
+                </motion.div>
   
                 <motion.div 
                     whileInView={{ y: 0, opacity: 1 }}
