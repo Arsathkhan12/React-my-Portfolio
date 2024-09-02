@@ -6,12 +6,12 @@ const Contact = () => {
   return (
     <div className="border-b border-neutral-900 pb-4">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <motion.h1 
-          className="my-20 text-center text-4xl"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-        >
+      <motion.h1
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y:-100}}
+        transition={{duration: 1.5, ease: "easeOut" }}
+        className="my-20 text-center text-4xl"
+      >
           Contact Me
         </motion.h1>
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
