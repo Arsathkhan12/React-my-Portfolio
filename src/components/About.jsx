@@ -45,7 +45,7 @@ const About = () => {
         >
           <div className="flex flex-col items-center lg:items-start">
             <p 
-              className="my-2 max-w-xl py-6">
+              className="my-2 max-w-xl py-6 font-light tracking-tighter">
               {ABOUT_TEXT}
             </p>
             
