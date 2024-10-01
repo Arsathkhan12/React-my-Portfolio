@@ -1,25 +1,59 @@
+import { useState } from "react";
 import logo from "../assets/A.M.Arsathkhan.png";
-import { FaLinkedin, FaGithub, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaWhatsapp, FaInstagram, FaBars, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <motion.nav 
-      className="mb-20 flex items-center justify-between py-6"
+      className="mb-20 flex items-center justify-between py-6 px-4 sm:px-8"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
     >
+      
       <motion.div 
         className="flex flex-shrink-0 items-center"
         whileHover={{ rotate: [0, 10, -10, 0], scale: 1.1 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
-        <img className="mx-2 w-40" src={logo} alt="logo" />
+        <img className="mx-2 w-32 sm:w-40" src={logo} alt="logo" />
       </motion.div>
+
+      
+      <div className="sm:hidden">
+        <button onClick={toggleMenu} className="text-2xl">
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+
+     
+      <motion.div 
+        className={`m-8 flex flex-col sm:flex-row items-center justify-center gap-8 tracking-tighter ${
+          menuOpen ? "block" : "hidden"
+        } sm:flex`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+      >
+        <a href="#hero" className="hover:text-[#F4A261] transition duration-300">Home</a>
+        <a href="#about" className="hover:text-[#F4A261] transition duration-300">About</a>
+        <a href="#technologies" className="hover:text-[#F4A261] transition duration-300">Technologies</a>
+        <a href="#experience" className="hover:text-[#F4A261] transition duration-300">Experience</a>
+        <a href="#education" className="hover:text-[#F4A261] transition duration-300">Education</a>
+        <a href="#projects" className="hover:text-[#F4A261] transition duration-300">Projects</a>
+        <a href="#contact" className="hover:text-[#F4A261] transition duration-300">Contact</a>
+      </motion.div>
+
       
       <motion.div 
-        className="m-8 flex items-center justify-center gap-4 text-2xl"
+        className="hidden sm:flex items-center justify-center gap-4 text-2xl"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
