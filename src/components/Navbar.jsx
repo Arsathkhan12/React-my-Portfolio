@@ -42,13 +42,13 @@ const Navbar = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
       >
-        <a href="#hero" className="hover:text-[#F4A261] transition duration-300">Home</a>
-        <a href="#about" className="hover:text-[#F4A261] transition duration-300">About</a>
-        <a href="#technologies" className="hover:text-[#F4A261] transition duration-300">Technologies</a>
-        <a href="#experience" className="hover:text-[#F4A261] transition duration-300">Experience</a>
-        <a href="#education" className="hover:text-[#F4A261] transition duration-300">Education</a>
-        <a href="#projects" className="hover:text-[#F4A261] transition duration-300">Projects</a>
-        <a href="#contact" className="hover:text-[#F4A261] transition duration-300">Contact</a>
+        <a href="#hero" className="hover:text-[#c7f467] transition duration-300">Home</a>
+        <a href="#about" className="hover:text-[#c7f467] transition duration-300">About</a>
+        <a href="#technologies" className="hover:text-[#c7f467] transition duration-300">Technologies</a>
+        <a href="#experience" className="hover:text-[#c7f467] transition duration-300">Experience</a>
+        <a href="#education" className="hover:text-[#c7f467] transition duration-300">Education</a>
+        <a href="#projects" className="hover:text-[#c7f467] transition duration-300">Projects</a>
+        <a href="#contact" className="hover:text-[#c7f467] transition duration-300">Contact</a>
       </motion.div>
 
       
